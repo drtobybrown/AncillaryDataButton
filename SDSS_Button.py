@@ -121,7 +121,7 @@ def Run(ra, dec, width, name=None, out_dir=None, temp_dir=None, replace=False, f
 
     # If no outout directory specified, set to current working directory
     if out_dir == None:
-        out_dir = os.getcwd()
+        out_dir = os.getcwd() + "/"
 
     # Check that output directory exists
     if not os.path.exists(out_dir):
