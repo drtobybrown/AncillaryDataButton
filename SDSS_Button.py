@@ -438,8 +438,9 @@ def SDSS_Generator(name, ra, dec, temp_dir, out_dir, band_dict, flux, thumbnails
                 thumb_out.show_markers(np.array([float(ra)]), np.array([float(dec)]), marker='+', s=500, lw=2.5, edgecolor='#01DF3A')
                 thumb_out.save(os.path.join(out_dir,name+'_SDSS_'+band+'.png'), dpi=125)
                 thumb_out.close()
-            except:
+            except Exception as e:
                 print('Failed making thumbnail for '+name)
+                print(e)
                 pdb.set_trace()
 
         # Clean memory before finishing
